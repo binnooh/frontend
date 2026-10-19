@@ -1,0 +1,526 @@
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+.App header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+.App header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.App main {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+.management-page {
+  min-height: 100vh;
+  padding: 40px max(24px, calc((100% - 1180px) / 2));
+  background: #f6f8fb;
+  color: #172033;
+  font-size: 16px;
+  text-align: left;
+}
+
+.auth-page {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 16px;
+  background: #f6f8fb;
+  color: #172033;
+  text-align: left;
+}
+
+.auth-card {
+  width: min(100%, 520px);
+  padding: 32px;
+  border: 1px solid #e1e6ef;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(23 32 51 / 5%);
+}
+
+.school-card {
+  width: min(100%, 720px);
+}
+
+.auth-card h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.auth-card > p:not(.management-eyebrow) {
+  color: #647087;
+}
+
+.auth-back {
+  margin: 0 0 24px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #3157a6;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+}
+
+.auth-options,
+.school-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.auth-options button,
+.school-list button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #dfe5ee;
+  border-radius: 8px;
+  background: #fff;
+  color: #243047;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+
+.auth-options button:hover,
+.school-list button:not(:disabled):hover {
+  border-color: #8ea5d6;
+  background: #f8faff;
+}
+
+.auth-options strong,
+.school-list strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.auth-options span,
+.school-list small,
+.school-list button > span:last-child {
+  color: #718097;
+  font-size: 13px;
+}
+
+.school-list button:disabled {
+  cursor: not-allowed;
+  opacity: .65;
+}
+
+.school-list button > span:last-child {
+  flex-shrink: 0;
+  font-weight: 600;
+}
+
+.auth-form {
+  display: grid;
+  gap: 16px;
+  margin: 22px 0 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.auth-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #39445a;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.auth-form input {
+  min-height: 42px;
+  padding: 9px 11px;
+  border: 1px solid #cfd7e4;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.management-account {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #566279;
+  font-weight: 600;
+}
+
+.parent-profile dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 24px;
+  margin: 14px 0 0;
+}
+
+.parent-profile dl > div {
+  padding: 14px 0;
+  border-bottom: 1px solid #e8ecf2;
+}
+
+.parent-profile dt {
+  color: #718097;
+  font-size: 13px;
+}
+
+.parent-profile dd {
+  margin: 5px 0 0;
+  color: #27334a;
+  font-weight: 600;
+}
+
+.management-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.management-header h1,
+.management-toolbar h2,
+.management-form h3 {
+  margin: 0;
+}
+
+.management-header h1 {
+  font-size: 32px;
+}
+
+.management-header p,
+.management-toolbar p {
+  margin: 6px 0 0;
+  color: #647087;
+}
+
+.management-eyebrow {
+  margin: 0 0 8px !important;
+  color: #4764a8 !important;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.management-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #dfe5ee;
+}
+
+.management-tab {
+  padding: 12px 18px;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: transparent;
+  color: #647087;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+}
+
+.management-tab.active {
+  border-bottom-color: #4263b0;
+  color: #294c9b;
+}
+
+.management-panel {
+  padding: 24px;
+  border: 1px solid #e1e6ef;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(23 32 51 / 4%);
+}
+
+.management-toolbar,
+.management-pagination,
+.management-form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.management-primary,
+.management-secondary,
+.pagination-buttons button {
+  min-height: 40px;
+  padding: 9px 14px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+}
+
+.management-primary {
+  background: #3157a6;
+  color: #fff;
+}
+
+.management-primary:hover {
+  background: #25478f;
+}
+
+.management-primary:disabled,
+.pagination-buttons button:disabled {
+  cursor: not-allowed;
+  opacity: .55;
+}
+
+.management-secondary,
+.pagination-buttons button {
+  border-color: #d7deea;
+  background: #fff;
+  color: #354158;
+}
+
+.management-form {
+  margin: 24px 0;
+  padding: 20px;
+  border: 1px solid #dfe5ee;
+  border-radius: 9px;
+  background: #fafbfd;
+}
+
+.management-form h3 {
+  margin-bottom: 16px;
+}
+
+.management-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.management-form-grid label,
+.management-search label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #39445a;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.management-form-grid input:not([type="checkbox"]),
+.management-form-grid textarea,
+.management-search input,
+.management-pagination select {
+  width: 100%;
+  min-height: 40px;
+  padding: 9px 11px;
+  border: 1px solid #cfd7e4;
+  border-radius: 6px;
+  background: white;
+  color: #172033;
+  font: inherit;
+}
+
+.management-form-grid textarea {
+  min-height: 76px;
+  resize: vertical;
+}
+
+.management-form-grid small {
+  color: #718097;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.management-wide {
+  grid-column: 1 / -1;
+}
+
+.management-form-grid .management-checkbox {
+  flex-direction: row;
+  align-items: center;
+  gap: 9px;
+}
+
+.management-checkbox input {
+  width: 16px;
+  height: 16px;
+}
+
+.management-form-actions {
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
+.management-search {
+  width: min(100%, 390px);
+  margin: 24px 0 16px;
+}
+
+.management-error {
+  margin: 14px 0;
+  padding: 11px 13px;
+  border: 1px solid #f2c6c6;
+  border-radius: 6px;
+  background: #fff1f1;
+  color: #982e2e;
+}
+
+.management-table-wrap {
+  overflow-x: auto;
+}
+
+.management-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.management-table th,
+.management-table td {
+  padding: 13px 12px;
+  border-bottom: 1px solid #e8ecf2;
+  vertical-align: middle;
+}
+
+.management-table th {
+  background: #f8f9fb;
+  color: #667188;
+  font-size: 12px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.management-table td {
+  color: #344057;
+}
+
+.management-table td small {
+  display: block;
+  margin-top: 4px;
+  color: #77839a;
+}
+
+.management-row-actions {
+  white-space: nowrap;
+}
+
+.management-row-actions button {
+  margin-right: 10px;
+  padding: 4px 0;
+  border: 0;
+  background: transparent;
+  color: #3157a6;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+}
+
+.management-row-actions .management-delete {
+  color: #b23a3a;
+}
+
+.management-status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #f0f1f4;
+  color: #626d80;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.management-status.active {
+  background: #e6f5ed;
+  color: #28764a;
+}
+
+.management-empty {
+  padding: 20px 12px !important;
+  color: #6e7a90 !important;
+  text-align: center;
+}
+
+.management-pagination {
+  margin-top: 18px;
+  color: #69758b;
+  font-size: 14px;
+}
+
+.management-pagination label,
+.pagination-buttons {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.management-pagination select {
+  width: auto;
+  min-height: 34px;
+  padding: 5px 8px;
+}
+
+.pagination-buttons button {
+  min-height: 34px;
+  padding: 5px 9px;
+  font-size: 13px;
+}
+
+@media (max-width: 680px) {
+  .auth-card {
+    padding: 24px 18px;
+  }
+
+  .parent-profile dl {
+    grid-template-columns: 1fr;
+  }
+
+  .management-page {
+    padding: 24px 14px;
+  }
+
+  .management-panel {
+    padding: 16px 12px;
+  }
+
+  .management-toolbar {
+    align-items: flex-start;
+  }
+
+  .management-account {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    font-size: 13px;
+  }
+
+  .management-toolbar p {
+    max-width: 230px;
+  }
+
+  .management-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .management-wide {
+    grid-column: auto;
+  }
+
+  .management-pagination {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .pagination-buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
